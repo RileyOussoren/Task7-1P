@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/itemDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/details"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="REMOVE"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/spinnerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Lost And Found Items"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+    <Spinner
+        android:id="@+id/itemsSpinner"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="67dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nameEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/radioText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="Post Type:"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/itemsSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemDetails">
+
+
+        <RadioButton
+            android:id="@+id/radioLost"
+            android:layout_width="70dp"
+            android:layout_height="47dp"
+            android:text="Lost"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="145dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <RadioButton
+            android:id="@+id/radioFound"
+            android:layout_width="96dp"
+            android:layout_height="48dp"
+            android:text="Found"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="215dp"
+            tools:layout_editor_absoluteY="41dp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="66dp"
+        android:text="Name:"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/phoneEntry"
+        app:layout_constraintStart_toStartOf="@+id/nameEntry"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTitle" />
+
+    <TextView
+        android:id="@+id/phoneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Phone:"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/createButton"
+        app:layout_constraintStart_toStartOf="@+id/nameEntry" />
+
+    <TextView
+        android:id="@+id/descriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:text="Description:"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/phoneEntry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Date"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/dateEntry"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionEntry" />
+
+    <TextView
+        android:id="@+id/locationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="65dp"
+        android:text="Location"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/itemDetails"
+        app:layout_constraintStart_toStartOf="@+id/dateEntry" />
+
+    <EditText
+        android:id="@+id/nameEntry"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/name"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nameTitle" />
+
+    <EditText
+        android:id="@+id/phoneEntry"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/phone"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/phoneTitle" />
+
+    <EditText
+        android:id="@+id/descriptionEntry"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/description"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/showButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showButton" />
+
+    <EditText
+        android:id="@+id/dateEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/date"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/locationTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dateTitle" />
+
+    <EditText
+        android:id="@+id/locationEntry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="6dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/location"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/itemDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTitle" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="12dp"
+        android:text="SAVE"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/removeButton"
+        app:layout_constraintStart_toStartOf="@+id/removeButton" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:text="CREATE A NEW ADVERT"
+        app:layout_constraintBottom_toBottomOf="@+id/descriptionTitle"
+        app:layout_constraintStart_toStartOf="@+id/showButton" />
+
+    <Button
+        android:id="@+id/showButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="27dp"
+        android:text="SHOW ALL LOST AND FOUND ITEMS"
+        app:layout_constraintStart_toStartOf="@+id/descriptionEntry"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
